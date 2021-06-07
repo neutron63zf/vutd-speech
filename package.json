@@ -1,0 +1,56 @@
+{
+  "name": "vutd-speech",
+  "version": "0.0.1",
+  "description": "speech bot for vutd",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "ts-node": "ts-node -r tsconfig-paths/register",
+    "eslint": "eslint --ext .js,.ts --ignore-path .gitignore .",
+    "prettier": "prettier './**/*.{js,ts}' --write --loglevel warn",
+    "lint": "npm run eslint",
+    "lintfix": "npm run prettier && npm run eslint --fix",
+    "prepare": "husky install",
+    "lint-staged": "lint-staged"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neutron63zf/vutd-speech.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/neutron63zf/vutd-speech/issues"
+  },
+  "homepage": "https://github.com/neutron63zf/vutd-speech#readme",
+  "devDependencies": {
+    "@types/jest": "^26.0.23",
+    "@typescript-eslint/eslint-plugin": "^4.26.0",
+    "@typescript-eslint/parser": "^4.26.0",
+    "eslint": "^7.28.0",
+    "eslint-config-prettier": "^8.3.0",
+    "husky": "^6.0.0",
+    "jest": "^27.0.4",
+    "lint-staged": "^11.0.0",
+    "prettier": "^2.3.1",
+    "ts-jest": "^27.0.3",
+    "ts-node": "^10.0.0",
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "^4.3.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts}": [
+      "prettier --write .",
+      "eslint"
+    ]
+  },
+  "dependencies": {
+    "@google-cloud/text-to-speech": "^3.2.2",
+    "discord.js": "^12.5.3"
+  }
+}
