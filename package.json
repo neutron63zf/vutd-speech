@@ -48,5 +48,9 @@
       "prettier --write .",
       "eslint"
     ]
+  },
+  "dependencies": {
+    "@google-cloud/text-to-speech": "^3.2.2",
+    "discord.js": "^12.5.3"
   }
 }
