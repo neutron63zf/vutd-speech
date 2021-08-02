@@ -11,7 +11,7 @@
     "lint": "npm run eslint",
     "lintfix": "npm run prettier && npm run eslint --fix",
     "prepare": "husky install",
-    "lint-staged": "lint-staged"
+    "lint-staged": "lint-staged --allow-empty"
   },
   "repository": {
     "type": "git",
@@ -52,6 +52,7 @@
   },
   "dependencies": {
     "@google-cloud/text-to-speech": "^3.2.2",
-    "discord.js": "^12.5.3"
+    "discord.js": "^12.5.3",
+    "google-tts-api": "^2.0.2"
   }
 }
